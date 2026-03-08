@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500&family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+/* PAGE */
+
+.page{
+width:100%;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+/* PAGE 1 */
+
+#page1{
+background:#fff3b0;
+}
+
+.envelope{
+width:260px;
+height:170px;
+background:#c69c6d;
+position:relative;
+border-radius:6px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+top:-85px;
+left:0;
+width:0;
+height:0;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-bottom:85px solid #b68958;
+}
+
+.to{
+position:absolute;
+top:12px;
+left:12px;
+font-family:'Playfair Display',serif;
+font-size:18px;
+}
+
+.from{
+position:absolute;
+bottom:12px;
+right:12px;
+font-family:'Playfair Display',serif;
+font-size:16px;
+}
+
+/* PAGE 2 */
+
+#page2{
+display:none;
+background:#c2185b;
+padding:60px 20px;
+}
+
+/* LETTER PAPER */
+
+.letter{
+background:#fffaf0;
+max-width:750px;
+width:100%;
+padding:60px 40px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+line-height:1.8;
+}
+
+/* LETTER TITLE */
+
+.letter h1{
+font-family:'Great Vibes',cursive;
+font-size:48px;
+text-align:center;
+margin-bottom:10px;
+color:#c2185b;
+}
+
+.subtitle{
+text-align:center;
+font-size:16px;
+margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.btn{
+display:block;
+margin:25px auto;
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:#c2185b;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+/* MEMORIES */
+
+.memories{
+margin-top:40px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:35px;
+}
+
+.memories h2{
+font-family:'Playfair Display',serif;
+font-size:30px;
+margin-bottom:10px;
+}
+
+/* PHOTO BOX */
+
+.box{
+position:relative;
+width:300px;
+aspect-ratio:3/4;
+overflow:hidden;
+border-radius:14px;
+}
+
+.box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.msg{
+position:absolute;
+bottom:15px;
+left:15px;
+right:15px;
+color:white;
+font-weight:600;
+opacity:0;
+transition:0.4s;
+}
+
+.box:hover .msg{
+opacity:1;
+}
+
+/* LETTER MESSAGE */
+
+.message{
+margin-top:50px;
+font-family:'Dancing Script',cursive;
+font-size:20px;
+color:#333;
+}
+
+.yellow{
+color:#c2185b;
+font-weight:600;
+}
+
+/* HEARTS */
+
+.heart{
+position:fixed;
+font-size:22px;
+animation:jump 2s infinite;
+}
+
+@keyframes jump{
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
+}
+
+/* BUTTERFLIES */
+
+.butterfly{
+position:fixed;
+font-size:22px;
+animation:fly 10s linear infinite;
+}
+
+@keyframes fly{
+0%{transform:translateX(-10vw) translateY(10vh)}
+100%{transform:translateX(110vw) translateY(-10vh)}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page">
+
+<div class="envelope" onclick="openLetter()">
+<div class="to">To Shruti❤️</div>
+<div class="from">From Abhi</div>
+</div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2">
+
+<div class="letter">
+
+<h1>Happy Birthday Beautiful!! ❤️</h1>
+
+<div class="subtitle">
+Today is all about celebrating you and the joy you bring to my life
+</div>
+
+<div style="text-align:center;font-size:22px">
+❤️ 💝 💓 💘 ❤️
+</div>
+
+<button class="btn" onclick="playMusic()">Start Celebration</button>
+
+<!-- MEMORIES -->
+
+<div class="memories">
+
+<h2>Our Beautiful Memories</h2>
+
+<div class="box">
+<img src="images/photo1.jpg">
+<div class="msg">My heart belongs to you!</div>
+</div>
+
+<div class="box">
+<img src="images/photo2.jpg">
+<div class="msg">Your Smile Light up my world!</div>
+</div>
+
+<div class="box">
+<img src="images/photo3.jpg">
+<div class="msg">Our adventures together!</div>
+</div>
+
+<div class="box">
+<img src="images/photo4.jpg">
+<div class="msg">My heart belongs to you!</div>
+</div>
+
+<div class="box">
+<img src="images/photo5.jpg">
+<div class="msg">Creating memories together!</div>
+</div>
+
+<div class="box">
+<img src="images/photo6.jpg">
+<div class="msg">Forever and always!</div>
+</div>
+
+</div>
+
+<!-- LETTER MESSAGE -->
+
+<div class="message">
+
+<h2 style="font-family:'Playfair Display',serif;text-align:center;">A Special Message For You</h2>
+
+<p>
+On this special day, I want you to know how grateful I am to have you in my life. Your laughter fills my days with joy, your love gives me strength, and your presence makes everything better. You are not just my girlfriend, you are my best friend, my partner in crime, and the love of my life.
+</p>
+
+<p>
+Today, we celebrate you - your kindness, your beauty, your amazing spirit, and all the wonderful things that make you uniquely you. I hope this new year of your life brings you endless happiness, incredible adventures, and all your dreams come true.
+</p>
+
+<p class="yellow">
+Happy Birthday my love Here's to many more years of laughter love and beautiful memories together.
+</p>
+
+<div style="text-align:center;font-size:28px;margin-top:10px">
+💗 💗 💗
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- AUDIO -->
+
+<audio id="music" loop>
+<source src="music/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function openLetter(){
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="block";
+}
+
+function playMusic(){
+document.getElementById("music").play();
+}
+
+const hearts=["💘","💝","💖","💗","💓","💞","💕","❣️","❤️‍🔥","🩷"];
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerText=hearts[Math.floor(Math.random()*hearts.length)];
+h.style.left=Math.random()*100+"vw";
+h.style.top=Math.random()*100+"vh";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),4000);
+},600);
+
+setInterval(()=>{
+let b=document.createElement("div");
+b.className="butterfly";
+b.innerText="🦋";
+b.style.top=Math.random()*100+"vh";
+document.body.appendChild(b);
+setTimeout(()=>b.remove(),10000);
+},4000);
+
+</script>
+
+</body>
+</html>
